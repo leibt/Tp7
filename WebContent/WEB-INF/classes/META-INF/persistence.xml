@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="bdd_tp_PU" transaction-type="JTA">
+		<jta-data-source>
+			jdbc/tpPool
+		</jta-data-source>
+		<class>be.example.entities.Client</class>
+		<class>be.example.entities.Order</class>
+		<properties>
+	        <property name="eclipselink.logging.level.sql" value="FINE"/>
+	        <property name="eclipselink.logging.parameters" value="true"/>
+	    </properties>
+	</persistence-unit>
+</persistence>
